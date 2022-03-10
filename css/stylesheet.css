@@ -1,0 +1,1557 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: unset;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --logoColor: #c61334;
+    --lightLogo: #e8a1ae;
+    --smokeGray_color: #716d6e;
+    --hero_Background: linear-gradient(to bottom, #303131 0%, #4d4f4f 50%, #303131 100%);
+    --arrowColor: #303131;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    margin: 0px 0px 50px;
+}
+
+.header .cantainer {
+    width: 90%;
+    margin: auto;
+}
+
+.header .cantainer .topbar {
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    align-items: center;
+}
+
+.header .cantainer .topbar .left p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--smokeGray_color)
+}
+
+.header .cantainer .topbar .right {
+    position: relative;
+}
+
+.header .cantainer .topbar .right a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    padding: 10px 15px;
+    background-color: var(--logoColor);
+}
+
+.header .cantainer .topbar .right a i {
+    border: 1px solid white;
+    padding: 2px 4px;
+    font-size: 12px;
+}
+
+.header .cantainer .topbar .right .themeWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: white;
+    padding: 5px 0px;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    z-index: 5;
+    border: 1px solid #0000003b;
+    box-shadow: 0 0px 5px 0px #0000003b;
+    transition: 0.3s ease-in-out;
+    bottom: 47px;
+}
+
+.header .cantainer .topbar .right .themeWrapper .box {
+    height: 35px;
+    width: 35px;
+    margin: auto;
+}
+
+.header .cantainer .topbar .right .themeWrapper .red {
+    background-color: #c61334;
+}
+
+.header .cantainer .topbar .right .themeWrapper .yellow {
+    background-color: yellow;
+}
+
+.header .cantainer .topbar .right .themeWrapper .green {
+    background-color: green;
+}
+
+.header .cantainer .topbar .right .themeWrapper_active {
+    bottom: -47px;
+}
+
+.header .cantainer .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+.header .cantainer .navbar .right ul {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.header .cantainer .navbar ul li:first-child a {
+    border: 2px solid #716d6e85;
+}
+
+.header .cantainer .navbar ul li:first-child a:hover {
+    background-color: #d3d3d36b;
+    border: 2px solid #716d6e00;
+}
+
+.header .cantainer .navbar ul li a {
+    text-transform: capitalize;
+    color: var(--smokeGray_color);
+    font-weight: 500;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.header .cantainer .navbar ul li a:hover {
+    background-color: #d3d3d36b;
+}
+
+.hero {
+    background: var(--hero_Background);
+    color: white;
+    padding: 50px 0px;
+    position: relative;
+}
+
+.hero .rs_arrowDown {
+    width: 0;
+    height: 0;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-top: 45px solid var(--arrowColor);
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    right: 0;
+    margin: 0px auto 0px;
+}
+
+.hero .cantainer {
+    margin: 0px auto 0px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    overflow: hidden;
+}
+
+.hero .cantainer .right {
+    padding: 0px 5%;
+}
+
+.hero .cantainer .right .grid .item .box .box_top {
+    margin: 0px 0px 50px;
+}
+
+.hero .cantainer .right .grid .item .box img {
+    width: 100%;
+}
+
+.hero .cantainer .right .grid .owl-nav {
+    text-align: right;
+}
+
+.hero .cantainer .right .grid .owl-nav button {
+    font-size: 70px;
+    font-weight: bolder;
+    color: white;
+}
+
+.hero .cantainer .right .grid .owl-nav button:hover {
+    background-color: unset;
+}
+
+.hero .cantainer .right .grid .item .box h2 {
+    font-size: 36px;
+    color: white;
+    font-weight: 900;
+    margin: 0px 0px 10px;
+}
+
+.hero .cantainer .right .grid .item .box h3 {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.hero .cantainer .left .form {
+    background-color: white;
+    padding: 50px 30px;
+    width: 100%;
+    margin: 0px auto 0px;
+    box-shadow: 0 0 20px 0px #00000061;
+}
+
+.hero .cantainer .left .form select,
+.hero .cantainer .left .form input {
+    width: 100%;
+    border: 2px solid #d3d3d3ad;
+    border-radius: 3px;
+    height: 42px;
+    padding: 0px 10px;
+    color: var(--logoColor);
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.hero .cantainer .left .form select::placeholder,
+.hero .cantainer .left .form input::placeholder {
+    color: var(--logoColor);
+}
+
+.hero .cantainer .left .form label {
+    color: var(--smokeGray_color);
+    background-color: #EFE9E9;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 7px;
+    padding: 0px 0px 0px 7px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.hero .cantainer .left .form .car_type select {
+    color: var(--smokeGray_color);
+    height: 60px;
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: none;
+}
+
+.hero .cantainer .left .form .grid {
+    display: grid;
+    grid-template-columns: 100px auto;
+    align-items: center;
+}
+
+.hero .cantainer .left .form .grid001 {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+}
+
+.hero .cantainer .left .form .field_001 {
+    margin: 0px 0px 20px;
+}
+
+.hero .cantainer .left .form .field_001 input[type="date"] {
+    text-transform: none;
+    position: relative;
+}
+
+.hero .cantainer .left .form .field_001 input[type="date"]::-webkit-inner-spin-button,
+.hero .cantainer .left .form .field_001 input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    z-index: 1;
+    background-color: #ff000000;
+    margin: auto;
+    mix-blend-mode: color;
+}
+
+.hero .cantainer .left .form .hide {
+    display: none;
+}
+
+.hero .cantainer .left .form .field_001 a {
+    color: var(--smokeGray_color);
+    font-weight: 500;
+}
+
+.hero .cantainer .left .form .field_001.rs_btn a {
+    background-color: var(--logoColor);
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    padding: 15px 0px;
+    transition: 0.3s ease-in-out;
+}
+
+.hero .cantainer .left .form .field_001.rs_btn a:hover {
+    background-color: var(--smokeGray_color);
+}
+
+.hero .cantainer .left .form .grid001 select {
+    width: 90%;
+    margin: 0px 0px 0px 10%;
+}
+
+.heading h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 46px;
+    font-weight: 900;
+    color: var(--smokeGray_color);
+    height: 80px;
+    position: relative;
+}
+
+.heading h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 150px;
+    height: 5px;
+    background-color: var(--logoColor);
+}
+
+.customer_services {
+    margin: 100px 0px;
+}
+
+.customer_services .cantainer {
+    width: 90%;
+    margin: auto;
+}
+
+.customer_services .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 50px 0px;
+}
+
+.customer_services .grid .item {
+    background-color: #EDEDED;
+    padding: 50px 40px;
+}
+
+.customer_services .grid .item .top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0px 0px 30px;
+}
+
+.customer_services .grid .item i {
+    background-color: var(--logoColor);
+    color: white;
+    font-size: 28px;
+    padding: 6px 10px;
+}
+
+.customer_services .grid .item h1 {
+    color: var(--smokeGray_color);
+}
+
+.customer_services .grid .item p {
+    color: var(--smokeGray_color);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.news_letter {
+    background-color: var(--logoColor);
+    color: white;
+    padding: 80px 0px;
+}
+
+.news_letter .cantainer {
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.news_letter .cantainer .text h1 {
+    font-size: 28px;
+}
+
+.news_letter .cantainer .text h2 {
+    font-size: 17px;
+    font-weight: 300;
+    margin: 5px 0px 0px;
+}
+
+.email {
+    background-color: white;
+    padding: 10px 5px;
+}
+
+.news_letter .cantainer .email input {
+    border: unset;
+    width: 300px;
+    height: 35px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.news_letter .cantainer .email a {
+    text-transform: uppercase;
+    color: var(--smokeGray_color);
+    border: 1px solid var(--smokeGray_color);
+    padding: 8px 16px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.news_letter .cantainer .icon {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.news_letter .cantainer .icon a {
+    display: block;
+}
+
+.news_letter .cantainer .icon a i {
+    font-size: 32px;
+    color: white;
+    width: 60px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news_letter .cantainer .icon a i.fa-brands.fa-twitter {
+    background-color: #37A4CF;
+}
+
+.news_letter .cantainer .icon a i.fa-brands.fa-google-plus-g {
+    background-color: #D41433;
+}
+
+.news_letter .cantainer .icon a i.fa-brands.fa-facebook-f {
+    background-color: #375695;
+}
+
+.vehicle_models {
+    margin: 100px 0px;
+}
+
+.vehicle_models .cantainer {
+    width: 90%;
+    margin: 0px auto 0px;
+}
+
+.vehicle_models .cantainer .heading {
+    margin: 0px 0px 50px;
+}
+
+.vehicle_models .cantainer .heading h1 {
+    text-align: left;
+}
+
+.vehicle_models .cantainer .heading h1::after {
+    content: '';
+    background-color: unset;
+}
+
+.vehicle_models .cantainer .heading h1 span {
+    font-weight: 300;
+}
+
+.vehicle_models .cantainer .grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.vehicle_models .cantainer .grid .item ul li {
+    margin: 0px 0px 1px;
+    width: 270px;
+}
+
+.vehicle_models .cantainer .grid .item ul li a {
+    display: block;
+    color: var(--smokeGray_color);
+    background-color: #d3d3d36b;
+    font-size: 21px;
+    padding: 20px;
+    font-weight: 400;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.vehicle_models .cantainer .grid .item ul li a div {
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    position: absolute;
+    transform: rotateZ(180deg);
+    bottom: 0px;
+    right: -15px;
+    top: 0;
+    margin: auto;
+    transition: 0.3s ease-in-out;
+}
+
+.vehicle_models .cantainer .grid .item ul li:first-child a {
+    background-color: var(--lightLogo);
+}
+
+.vehicle_models .cantainer .grid .item ul li:first-child a div {
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid var(--lightLogo);
+    border-top: 15px solid transparent;
+    position: absolute;
+    transform: rotateZ(180deg);
+    bottom: 0px;
+    right: -15px;
+    top: 0;
+    margin: auto;
+    transition: 0.3s ease-in-out;
+}
+
+.vehicle_models .cantainer .grid .item ul li a:hover div {
+    border-right: 15px solid var(--smokeGray_color);
+}
+
+.vehicle_models .cantainer .grid .item ul li a:hover {
+    background-color: lightgray;
+}
+
+.vehicle_models .cantainer .grid .item ul li a:focus {
+    background-color: var(--lightLogo);
+}
+
+.vehicle_models .cantainer .grid .item ul li a:focus div {
+    border-right: 15px solid var(--lightLogo);
+}
+
+.vehicle_models .cantainer .grid .item ul li.arrow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: 2px;
+    position: sticky;
+    bottom: 0px;
+    background-color: white;
+}
+
+.vehicle_models .cantainer .grid .item ul li.arrow a {
+    font-size: 30px;
+    color: white;
+    background-color: dimgray;
+    padding: 3px 0px;
+}
+
+.vehicle_models .cantainer .grid .item ul li.arrow a:hover {
+    color: dimgray;
+    background-color: var(--lightLogo);
+}
+
+.vehicle_models .cantainer .grid .item .price p span {
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.vehicle_models .cantainer .grid .item .price p {
+    display: block;
+    color: var(--smokeGray_color);
+    background-color: var(--lightLogo);
+    font-size: 21px;
+    padding: 15px;
+    font-weight: 400;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.vehicle_models .cantainer .grid .item table tr td {
+    white-space: nowrap;
+    border-bottom: 1px solid black;
+    padding: 12px 10px;
+    color: var(--smokeGray_color);
+}
+
+.vehicle_models .cantainer .grid .item .reserve_btn a {
+    color: white;
+    background-color: var(--logoColor);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    box-shadow: 5px 5px 0 #6969693d;
+}
+
+.vehicle_models .cantainer .grid .item:nth-child(2) {
+    align-self: center;
+}
+
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+    border: none;
+    float: left;
+}
+
+.rating>input {
+    display: none;
+}
+
+.rating>label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating>.half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating>label {
+    color: #ddd;
+    float: right;
+}
+
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating>input:checked~label,
+
+/* show gold star when clicked */
+
+.rating:not(:checked)>label:hover,
+
+/* hover current star */
+
+.rating:not(:checked)>label:hover~label {
+    color: #FFD700;
+}
+
+
+/* hover previous stars in list */
+
+.rating>input:checked+label:hover,
+
+/* hover current star when changing rating */
+
+.rating>input:checked~label:hover,
+.rating>label:hover~input:checked~label,
+
+/* lighten current selection */
+
+.rating>input:checked~label:hover~label {
+    color: #FFED85;
+}
+
+.testimonal {
+    margin: 0px 0px 50px;
+}
+
+.testimonal .cantainer {
+    width: 90%;
+    margin: auto;
+}
+
+.testimonal .cantainer .heading {
+    margin: 0px 0px 50px;
+}
+
+.testimonal .cantainer .testimonal_grid {
+    overflow: hidden;
+}
+
+.testimonal .cantainer .testimonal_grid .item {
+    width: 80%;
+    margin: auto;
+}
+
+.testimonal .cantainer .testimonal_grid .item .stars_wrapper {
+    overflow: hidden;
+    margin: 0px auto 10px;
+    width: fit-content;
+}
+
+.testimonal .cantainer .testimonal_grid .item p {
+    text-align: center;
+    font-size: 20px;
+    color: var(--smokeGray_color);
+    line-height: 1.7;
+}
+
+.testimonal .cantainer .testimonal_grid .item p span {
+    display: block;
+    color: var(--logoColor);
+    font-weight: 600;
+}
+
+.quality_guarantee {
+    margin: 50px auto;
+}
+
+.quality_guarantee .cantainer {
+    width: 90%;
+    margin: auto;
+}
+
+.quality_guarantee .grid .item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin: 0px 0px 50px;
+}
+
+.quality_guarantee .grid .item .item_text {
+    color: var(--smokeGray_color);
+}
+
+.quality_guarantee .grid .item .item_image img {
+    width: 100%;
+}
+
+.quality_guarantee .grid .item .item_text h1 {
+    font-size: 36px;
+}
+
+.quality_guarantee .grid .item .item_text p {
+    margin: 24px 0px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.quality_guarantee .grid .item .item_text p.light {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.quality_guarantee .grid .item .item_text p.light a {
+    color: var(--logoColor);
+    display: inline-block;
+}
+
+.quality_guarantee .grid .item .item_text p.light .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid var(--logoColor);
+}
+
+.quality_guarantee .grid .item .item_text p.light .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: var(--logoColor);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.quality_guarantee .grid .item .item_text p.light .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--logoColor) transparent transparent transparent;
+}
+
+.quality_guarantee .grid .item .item_text p.light .tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.quality_guarantee .grid .item .item_text a.btn {
+    color: white;
+    background-color: var(--logoColor);
+    display: inline-block;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px;
+    margin: 10px 0px;
+    box-shadow: 5px 5px 0 #6969693d;
+    transition: 0.3s ease-in-out;
+}
+
+.quality_guarantee .grid .item .item_text a.btn:hover {
+    background-color: var(--smokeGray_color);
+}
+
+.quality_guarantee .cantainer .grid .item:last-child .item_image {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.partners {
+    background-color: #F8F8F8;
+    padding: 80px 0px;
+}
+
+.partners .cantainer {
+    width: 90%;
+    margin: 0px auto 0px;
+}
+
+.partners .cantainer .heading {
+    margin: 0px 0px 50px;
+}
+
+.partners .cantainer .p_wrapper p {
+    text-align: center;
+    font-size: 17px;
+    color: var(--smokeGray_color);
+    line-height: 1.5;
+}
+
+.partners .cantainer .icon_wrapper {
+    margin: 50px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact_us {
+    margin: 80px 0px;
+}
+
+.contact_us .cantainer {
+    width: 90%;
+    margin: 0px auto 0px;
+}
+
+.contact_us .cantainer .heading h1 {
+    text-align: left;
+    font-size: 34px;
+}
+
+.contact_us .cantainer .heading h1::after {
+    background-color: transparent;
+}
+
+.contact_us .cantainer .grid {
+    color: var(--smokeGray_color);
+    display: grid;
+    grid-template-columns: 69% 29%;
+    gap: 2%;
+}
+
+.contact_us .cantainer .grid .main .p_wrapper {
+    margin: 0px 0px 30px;
+}
+
+.contact_us .cantainer .grid .main .p_wrapper p.strong {
+    font-weight: 600;
+    margin: 5px 0px 0px;
+}
+
+.contact_us .cantainer .grid .main .p_wrapper p.strong span {
+    color: var(--logoColor);
+}
+
+.contact_us .cantainer .grid .main .form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.contact_us .cantainer .grid .main .form textarea,
+.contact_us .cantainer .grid .main .form input {
+    width: 100%;
+    border: unset;
+    background-color: lightgray;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contact_us .cantainer .grid .main .form input {
+    height: 45px;
+}
+
+.contact_us .cantainer .grid .main .form .double {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.contact_us .cantainer .grid .main .form a {
+    color: white;
+    background-color: var(--logoColor);
+    display: inline-block;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px;
+    margin: 0px 0px;
+    box-shadow: 5px 5px 0 #6969693d;
+    transition: 0.3s ease-in-out;
+}
+
+.contact_us .cantainer .grid .main .form a:hover {
+    background-color: var(--smokeGray_color);
+}
+
+.contact_us .cantainer .grid .sidebar .box {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background-color: #d3d3d366;
+    padding: 15px;
+    border-bottom: 10px solid var(--logoColor);
+    margin: 0px 0px 40px;
+}
+
+.contact_us .cantainer .grid .sidebar .box .box_image img {
+    display: block;
+    border: 1px solid var(--logoColor);
+}
+
+.contact_us .cantainer .grid .sidebar .top {
+    margin: 0px 0px 30px;
+}
+
+.contact_us .cantainer .grid .sidebar .sidebar_heading h3 {
+    font-weight: 400;
+    margin: 0px 0px 10px;
+}
+
+.contact_us .cantainer .grid .sidebar .box .box_text p {
+    font-size: 14px;
+}
+
+.contact_us .cantainer .grid .sidebar .box .box_text p span {
+    color: var(--logoColor);
+    font-weight: 500;
+}
+
+.contact_us .cantainer .grid .sidebar .box .box_text h3 {
+    margin: 0px 0px 5px;
+}
+
+.footer {
+    background-color: lightgray;
+    padding: 40px 0px;
+}
+
+.footer .cantainer {
+    width: 90%;
+    margin: 0px auto 0px;
+    text-align: center;
+}
+
+.footer .cantainer .menu ul {
+    display: flex;
+    gap: 5px;
+    width: fit-content;
+    margin: auto;
+}
+
+.footer .cantainer .menu ul li a {
+    display: block;
+    text-transform: capitalize;
+    /* color: var(--smokeGray_color); */
+    color: #000000db;
+    padding: 10px 10px 0px 10px;
+    border-bottom: 1px solid var(--smokeGray_color);
+}
+
+.footer .cantainer .copy_rights {
+    margin: 20px 0px 0px;
+}
+
+.footer .cantainer .copy_rights p {
+    color: #000000db;
+    font-size: 14px;
+}
+
+.vehicle_models .cantainer .grid .item:nth-child(2) img {
+    display: block;
+    width: 100%;
+}
+
+.vehicles_dropdown {
+    display: none;
+}
+
+.menu_icon {
+    display: none;
+}
+
+.vehicle_models .cantainer .grid .item ul {
+    max-height: 440px;
+    overflow: hidden hidden;
+    position: relative;
+}
+
+
+/* Media - StyleSheet */
+
+@media (min-width:1200px) and (max-width: 1400px) {
+    /* Big Monitor's | Big Laptop's */
+}
+
+@media (min-width: 0px) and (max-width: 1200px) {
+    /* Laptop's horizzental | 15 inch Laptop's */
+    .header .cantainer,
+    .hero .cantainer,
+    .customer_services .cantainer,
+    .news_letter .cantainer,
+    .vehicle_models .cantainer,
+    .testimonal .cantainer,
+    .quality_guarantee .cantainer,
+    .partners .cantainer,
+    .contact_us .cantainer,
+    .footer .cantainer {
+        width: 98%;
+    }
+    .news_letter .cantainer .email input {
+        width: 270px;
+    }
+    .news_letter .cantainer .icon a i {
+        width: 45px;
+        height: 45px;
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1024px) {
+    .header .cantainer,
+    .hero .cantainer,
+    .customer_services .cantainer,
+    .news_letter .cantainer,
+    .vehicle_models .cantainer,
+    .testimonal .cantainer,
+    .quality_guarantee .cantainer,
+    .partners .cantainer,
+    .contact_us .cantainer,
+    .footer .cantainer {
+        width: 70%;
+    }
+    .header .cantainer .topbar {
+        display: none;
+    }
+    .header {
+        margin: 0px 0px;
+    }
+    .header .cantainer .navbar .left img {
+        width: 230px;
+    }
+    .header .cantainer .navbar .right .nav_menu {
+        display: block;
+        margin: 76px 0px 0px;
+        position: absolute;
+        z-index: 5;
+        background-color: white;
+        width: 0%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        transition: 0.5s ease-in-out;
+        overflow: hidden;
+    }
+    .header .cantainer .navbar .right .active {
+        width: 40%;
+    }
+    .header .cantainer .navbar .right .menu_icon {
+        display: block;
+    }
+    .header .cantainer .navbar .right .ul a {
+        color: var(--smokeGray_color);
+        border: 1px solid lightgray;
+        padding: 8px;
+        font-size: 18px;
+        display: block;
+    }
+    .header .cantainer .navbar ul li a {
+        display: block;
+        white-space: nowrap;
+        padding: 10px 15px;
+        margin: 0px 0px 12px;
+    }
+    .hero .cantainer {
+        grid-template-columns: 1fr;
+    }
+    .hero .cantainer .left {
+        grid-row: 2 / span 1;
+    }
+    .hero .cantainer .right {
+        padding: 0px;
+        text-align: center;
+        width: 100%;
+        overflow: hidden;
+    }
+    .hero .cantainer .right .grid .item .box h2 {
+        font-size: 28px;
+        margin: 0px 0px 5px;
+    }
+    .hero .cantainer .right .grid .item .box h3 {
+        font-size: 20px;
+    }
+    .hero .cantainer .right .grid .item .box .box_top {
+        margin: 0px 0px 25px;
+    }
+    .hero .cantainer .right .grid .item .box img {
+        width: 85%;
+        margin: auto;
+    }
+    .hero .cantainer .left .form .car_type select {
+        height: 45px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .hero .cantainer .left .form .field_001 {
+        margin: 0px 0px 15px;
+    }
+    .hero .cantainer .left .form .grid001 select {
+        width: 95%;
+        margin: 0px 0px 0px 5%;
+    }
+    .customer_services .grid {
+        grid-template-columns: 1fr;
+    }
+    .customer_services .grid .item i {
+        font-size: 20px;
+        padding: 5px 5px;
+    }
+    .customer_services .grid .item h1 {
+        font-size: 26px;
+    }
+    .customer_services .grid .item .top {
+        gap: 15px;
+        margin: 0px 0px 15px;
+    }
+    .customer_services .grid .item p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .heading h1 {
+        font-size: 38px;
+        font-weight: 600;
+        height: 60px;
+    }
+    .customer_services {
+        margin: 60px 0px;
+    }
+    .news_letter .cantainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .email {
+        padding: 10px;
+        display: flex;
+    }
+    .news_letter .cantainer .email input {
+        width: 100%;
+        height: 100%;
+    }
+    .news_letter .cantainer .icon {
+        justify-content: center;
+    }
+    .news_letter .cantainer .text h2 {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .vehicle_models {
+        margin: 50px 0px;
+    }
+    .vehicle_models .cantainer .heading {
+        margin: 0px 0px 22px;
+    }
+    .vehicle_models .cantainer .heading h1 span {
+        font-size: 30px;
+    }
+    .vehicle_models .cantainer .grid .item ul {
+        display: none;
+    }
+    .vehicle_models .cantainer .grid .item .vehicles_dropdown {
+        display: block;
+        width: 100%;
+    }
+    .vehicle_models .cantainer .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 40px 0px 0px;
+    }
+    .vehicle_models .cantainer .grid .item .vehicles_dropdown select {
+        width: 80%;
+        height: 40px;
+        margin: auto;
+        display: block;
+        font-size: 18px;
+        padding: 0px 10px;
+    }
+    .vehicle_models .cantainer .grid .item:nth-child(2) {
+        margin: 40px 0px;
+    }
+    .vehicle_models .cantainer .grid .item:nth-child(2) img {
+        display: block;
+        width: 80%;
+        margin: 0px auto 0px;
+    }
+    .vehicle_models .cantainer .grid .item table {
+        width: 100%;
+    }
+    .vehicle_models .cantainer .grid .item .reserve_btn a {
+        justify-content: left;
+        padding: 10px 10px;
+    }
+    .testimonal .cantainer .testimonal_grid .item {
+        width: 100%;
+    }
+    .quality_guarantee .grid .item {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin: 0px 0px 35px;
+    }
+    .quality_guarantee .grid .item .item_text {
+        grid-row: 2 / span 1;
+        text-align: center;
+    }
+    .quality_guarantee .grid .item .item_text h1 {
+        font-size: 30px;
+    }
+    .quality_guarantee .grid .item .item_text p.light {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 1.5;
+        color: var(--smokeGray_color);
+    }
+    .partners .cantainer .icon_wrapper {
+        margin: 30px 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    .contact_us .cantainer .grid {
+        grid-template-columns: 1fr;
+        margin: 30px 0px 0px;
+    }
+    .contact_us .cantainer .grid .sidebar {
+        grid-row: 1 / span 1;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 769px) {
+    /* Vertical/Portrait, i.e: Tablet's */
+    .header .cantainer,
+    .hero .cantainer,
+    .customer_services .cantainer,
+    .news_letter .cantainer,
+    .vehicle_models .cantainer,
+    .testimonal .cantainer,
+    .quality_guarantee .cantainer,
+    .partners .cantainer,
+    .contact_us .cantainer,
+    .footer .cantainer {
+        width: 85%;
+    }
+    .footer .cantainer .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 569px) {
+    /* Normal Phones, i.e: Galaxy s5 */
+    .header .cantainer,
+    .hero .cantainer,
+    .customer_services .cantainer,
+    .news_letter .cantainer,
+    .vehicle_models .cantainer,
+    .testimonal .cantainer,
+    .quality_guarantee .cantainer,
+    .partners .cantainer,
+    .contact_us .cantainer,
+    .footer .cantainer {
+        width: 95%;
+    }
+    .header .cantainer .navbar .right .nav_menu {
+        margin: 68px 0px 0px;
+    }
+    .header .cantainer .navbar .right .active {
+        width: 45%;
+    }
+    .header .cantainer .navbar .left img {
+        width: 180px;
+    }
+    .hero .cantainer .right .grid .item .box h2 {
+        font-size: 24px;
+        margin: 0px 0px 8px;
+    }
+    .hero .cantainer .right .grid .item .box h3 {
+        font-size: 16px;
+    }
+    .hero .cantainer .right .grid .owl-nav button {
+        font-size: 55px;
+        margin: 0px 0px 0px 15px;
+    }
+    .hero .cantainer .left .form {
+        padding: 15px 10px;
+    }
+    .hero .cantainer .left .form .car_type select {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .hero .cantainer .left .form label {
+        padding: 0px 0px 0px 4px;
+        font-size: 14px;
+        font-weight: 500;
+        gap: 5px;
+    }
+    .hero .cantainer .left .form .field_001 {
+        margin: 0px 0px 15px;
+    }
+    .hero .cantainer .left .form .grid {
+        grid-template-columns: 77px auto;
+    }
+    .hero .cantainer .left .form select,
+    .hero .cantainer .left .form input {
+        height: 40px;
+        padding: 0px 5px;
+        font-size: 15px;
+    }
+    .hero .cantainer .left .form .field_001 a {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .hero .cantainer .left .form .grid001 {
+        grid-template-columns: 77px 1fr 105px;
+    }
+    .hero .cantainer .left .form .field_001.rs_btn a {
+        font-size: 15px;
+        font-weight: 500;
+        padding: 12px 0px;
+        width: 80%;
+        margin: auto;
+    }
+    .hero .cantainer .right .grid .item .box img {
+        width: 100%;
+    }
+    .heading h1 {
+        font-size: 32px;
+        font-weight: 500;
+        height: 50px;
+    }
+    .customer_services .grid {
+        margin: 35px 0px;
+    }
+    .customer_services .grid .item .top {
+        gap: 10px;
+        margin: 0px 0px 10px;
+    }
+    .customer_services .grid .item i {
+        font-size: 19px;
+        padding: 5px 5px;
+    }
+    .customer_services .grid .item h1 {
+        font-size: 19px;
+        font-weight: 500;
+    }
+    .customer_services .grid .item {
+        padding: 20px 10px;
+    }
+    .customer_services .grid .item p {
+        text-align: justify;
+    }
+    .news_letter {
+        padding: 40px 0px;
+    }
+    .news_letter .cantainer .text h1 {
+        font-size: 24px;
+    }
+    .news_letter .cantainer .text h2 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .email {
+        padding: 5px;
+    }
+    .news_letter .cantainer .email input {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .news_letter .cantainer .email a {
+        padding: 10px 8px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .vehicle_models .cantainer .heading h1 {
+        text-align: center;
+    }
+    .vehicle_models .cantainer .heading h1 span {
+        display: none;
+    }
+    .vehicle_models .cantainer .heading h1::after {
+        background-color: var(--logoColor);
+    }
+    .vehicle_models .cantainer .grid {
+        margin: 30px 0px 0px;
+    }
+    .vehicle_models .cantainer .grid .item .vehicles_dropdown select {
+        width: 95%;
+    }
+    .vehicle_models .cantainer .grid .item:nth-child(2) img {
+        width: 100%;
+    }
+    .vehicle_models .cantainer .grid .item table tr td {
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+    .vehicle_models .cantainer .grid .item .reserve_btn a {
+        padding: 8px 10px;
+        width: 90%;
+        margin: 15px auto 0px;
+        font-size: 20px;
+        justify-content: center;
+    }
+    .testimonal .cantainer .heading {
+        margin: 0px 0px 30px;
+    }
+    .testimonal .cantainer .testimonal_grid .item p {
+        text-align: justify;
+        font-size: 17px;
+        line-height: 1.3;
+    }
+    .quality_guarantee .grid .item .item_text h1 {
+        font-size: 26px;
+    }
+    .quality_guarantee .grid .item .item_text p {
+        margin: 15px 0px;
+        font-size: 17px;
+        font-weight: 400;
+    }
+    .quality_guarantee .grid .item .item_text a.btn {
+        font-weight: 500;
+        font-size: 16px;
+        padding: 10px 15px;
+        margin: 10px 0px;
+    }
+    .quality_guarantee .grid .item .item_text p.light {
+        text-align: justify;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .partners {
+        padding: 40px 0px;
+    }
+    .partners .cantainer .heading {
+        margin: 0px 0px 30px;
+    }
+    .partners .cantainer .p_wrapper p {
+        text-align: justify;
+        font-size: 16px;
+    }
+    .contact_us {
+        margin: 40px 0px;
+    }
+    .contact_us .cantainer .heading h1 {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 500;
+        height: 50px;
+    }
+    .contact_us .cantainer .heading h1::after {
+        background-color: var(--logoColor);
+    }
+    .contact_us .cantainer .grid {
+        gap: 0%;
+    }
+    .contact_us .cantainer .grid .main .p_wrapper p.strong {
+        margin: 15px 0px 0px;
+    }
+    .contact_us .cantainer .grid .main .form .double {
+        grid-template-columns: 1fr;
+    }
+    .contact_us .cantainer .grid .main .form a {
+        width: fit-content;
+        margin: auto;
+        display: block;
+    }
+    .footer {
+        padding: 15px 0px;
+    }
+    .footer .cantainer .menu {
+        display: none;
+    }
+    .footer .cantainer .copy_rights {
+        margin: 0px 0px 0px;
+    }
+    .quality_guarantee .grid .item .item_text p.light .tooltip .tooltiptext {
+        display: none;
+    }
+    .testimonal .cantainer .testimonal_grid .item p span {
+        text-align: center;
+        margin: 10px 0px 0px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 360px) {
+    /* Very Small Phone's i.e: Iphone 4 */
+}
+
+
+/* ---------------------------------------------------------------------
+
+	Common Breakpoints for widths of devices:
+
+	320px — 480px: Mobile devices
+
+	481px — 768px: iPads, Tablets
+
+	769px — 1024px: Small screens, laptops
+
+	1025px — 1200px: Desktops, large screens
+
+	1201px and more —  Extra large screens, TV */

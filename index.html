@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/info-img.jpg">
+    <title>CAR | RENTAL</title>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header" id="HOME">
+        <div class="cantainer">
+            <div class="topbar">
+                <div class="left">
+                    <p>CONTACT: (562) 498-4600</p>
+                </div>
+                <div class="right">
+                    <a href="##" id="themePicker">select your theme<i class="fa-solid fa-angle-down"></i></a>
+                    <div class="themeWrapper">
+                        <div class="box red" onclick="themeChange(this)"></div>
+                        <div class="box yellow" onclick="themeChange(this)"></div>
+                        <div class="box green" onclick="themeChange(this)"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <div class="left">
+                    <img src="images/logo-red.gif" alt="logo" id="logoImage">
+                </div>
+                <div class="right">
+                    <div class="menu_icon">
+                        <a href="#" class="menuIcon"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <ul class="nav_menu">
+                        <li><a href="#HOME">home</a></li>
+                        <li><a href="#SERVICES">services</a></li>
+                        <li><a href="#VEHICAL_MODELS">vehical models</a></li>
+                        <li><a href="#LOCATION">location</a></li>
+                        <li><a href="#CONTACT">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hero -->
+    <div class="hero">
+        <div class="rs_arrowDown"></div>
+        <div class="cantainer">
+            <div class="left">
+                <div class="form">
+                    <div class="field_001 car_type">
+                        <select id="vehicle_Type">
+                            <option value="">Select your car type</option>
+                            <option value="VW Golf VII">VW Golf VII</option>
+                            <option value="Audi A1 S-LINE">Audi A1 S-LINE</option>
+                            <option value="Toyota Camry">Toyota Camry</option>
+                            <option value="BMW 320 ModernLine">BMW 320 ModernLine</option>
+                            <option value="Mercedes-Benz GLK">Mercedes-Benz GLK</option>
+                            <option value="VW Passat CC">VW Passat CC</option>
+                        </select>
+                    </div>
+                    <div class="field_001 grid">
+                        <label for=""><i class="fa-solid fa-location-dot"></i>pick-up</label>
+                        <input type="text" id="city" placeholder="enter a city or airport">
+                    </div>
+                    <div class="field_001">
+                        <a href="##" id="need_new_location">Need a different drop-off location?</a>
+                    </div>
+                    <div class="field_001 grid hide" id="new_dropOff_location">
+                        <label for=""><i class="fa-solid fa-location-dot"></i>drop-off</label>
+                        <input type="text" id="another_city" placeholder="enter a city or airport">
+                    </div>
+                    <div class="field_001 grid001">
+                        <label for=""><i class="fa-solid fa-calendar-days"></i>pick-up</label>
+                        <input type="date" id="pickup_date">
+                        <select name="pick-up-time" id="pickup_time">
+                            <option value="12:00 AM">12:00 AM</option>
+                            <option value="12:30 AM">12:30 AM</option>
+                            <option value="01:00 AM">01:00 AM</option>
+                            <option value="01:30 AM">01:30 AM</option>
+                            <option value="02:00 AM">02:00 AM</option>
+                            <option value="02:30 AM">02:30 AM</option>
+                            <option value="03:00 AM">03:00 AM</option>
+                            <option value="03:30 AM">03:30 AM</option>
+                            <option value="04:00 AM">04:00 AM</option>
+                            <option value="04:30 AM">04:30 AM</option>
+                            <option value="05:00 AM">05:00 AM</option>
+                            <option value="05:30 AM">05:30 AM</option>
+                            <option value="06:00 AM">06:00 AM</option>
+                            <option value="06:30 AM">06:30 AM</option>
+                            <option value="07:00 AM">07:00 AM</option>
+                            <option value="07:30 AM">07:30 AM</option>
+                            <option value="08:00 AM">08:00 AM</option>
+                            <option value="08:30 AM">08:30 AM</option>
+                            <option value="09:00 AM">09:00 AM</option>
+                            <option value="09:30 AM">09:30 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="10:30 AM">10:30 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="11:30 AM">11:30 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="12:30 PM">12:30 PM</option>
+                            <option value="01:00 PM">01:00 PM</option>
+                            <option value="01:30 PM">01:30 PM</option>
+                            <option value="02:00 PM">02:00 PM</option>
+                            <option value="02:30 PM">02:30 PM</option>
+                            <option value="03:00 PM">03:00 PM</option>
+                            <option value="03:30 PM">03:30 PM</option>
+                            <option value="04:00 PM">04:00 PM</option>
+                            <option value="04:30 PM">04:30 PM</option>
+                            <option value="05:00 PM">05:00 PM</option>
+                            <option value="05:30 PM">05:30 PM</option>
+                            <option value="06:00 PM">06:00 PM</option>
+                            <option value="06:30 PM">06:30 PM</option>
+                            <option value="07:00 PM">07:00 PM</option>
+                            <option value="07:30 PM">07:30 PM</option>
+                            <option value="08:00 PM">08:00 PM</option>
+                            <option value="08:30 PM">08:30 PM</option>
+                            <option value="09:00 PM">09:00 PM</option>
+                            <option value="09:30 PM">09:30 PM</option>
+                            <option value="10:00 PM">10:00 PM</option>
+                            <option value="10:30 PM">10:30 PM</option>
+                            <option value="11:00 PM">11:00 PM</option>
+                            <option value="11:30 PM">11:30 PM</option>
+                          </select>
+                    </div>
+                    <div class="field_001 grid001">
+                        <label for=""><i class="fa-solid fa-calendar-days"></i>drop-off</label>
+                        <input type="date" id="pickoff_date">
+                        <select name="pick-up-time" id="pickoff_time">
+                            <option value="12:00 AM">12:00 AM</option>
+                            <option value="12:30 AM">12:30 AM</option>
+                            <option value="01:00 AM">01:00 AM</option>
+                            <option value="01:30 AM">01:30 AM</option>
+                            <option value="02:00 AM">02:00 AM</option>
+                            <option value="02:30 AM">02:30 AM</option>
+                            <option value="03:00 AM">03:00 AM</option>
+                            <option value="03:30 AM">03:30 AM</option>
+                            <option value="04:00 AM">04:00 AM</option>
+                            <option value="04:30 AM">04:30 AM</option>
+                            <option value="05:00 AM">05:00 AM</option>
+                            <option value="05:30 AM">05:30 AM</option>
+                            <option value="06:00 AM">06:00 AM</option>
+                            <option value="06:30 AM">06:30 AM</option>
+                            <option value="07:00 AM">07:00 AM</option>
+                            <option value="07:30 AM">07:30 AM</option>
+                            <option value="08:00 AM">08:00 AM</option>
+                            <option value="08:30 AM">08:30 AM</option>
+                            <option value="09:00 AM">09:00 AM</option>
+                            <option value="09:30 AM">09:30 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="10:30 AM">10:30 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="11:30 AM">11:30 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="12:30 PM">12:30 PM</option>
+                            <option value="01:00 PM">01:00 PM</option>
+                            <option value="01:30 PM">01:30 PM</option>
+                            <option value="02:00 PM">02:00 PM</option>
+                            <option value="02:30 PM">02:30 PM</option>
+                            <option value="03:00 PM">03:00 PM</option>
+                            <option value="03:30 PM">03:30 PM</option>
+                            <option value="04:00 PM">04:00 PM</option>
+                            <option value="04:30 PM">04:30 PM</option>
+                            <option value="05:00 PM">05:00 PM</option>
+                            <option value="05:30 PM">05:30 PM</option>
+                            <option value="06:00 PM">06:00 PM</option>
+                            <option value="06:30 PM">06:30 PM</option>
+                            <option value="07:00 PM">07:00 PM</option>
+                            <option value="07:30 PM">07:30 PM</option>
+                            <option value="08:00 PM">08:00 PM</option>
+                            <option value="08:30 PM">08:30 PM</option>
+                            <option value="09:00 PM">09:00 PM</option>
+                            <option value="09:30 PM">09:30 PM</option>
+                            <option value="10:00 PM">10:00 PM</option>
+                            <option value="10:30 PM">10:30 PM</option>
+                            <option value="11:00 PM">11:00 PM</option>
+                            <option value="11:30 PM">11:30 PM</option>
+                          </select>
+                    </div>
+                    <div class="field_001 rs_btn">
+                        <a href="##" id="reserve_btn" onclick="reservationFormatCheck()">continue car reservation</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right" id="CAR_RESERVE">
+                <div class="grid car-carousel owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="box">
+                            <div class="box_top">
+                                <h2>LUXURY CAR FROM FROM $28 DAY</h2>
+                                <h3>Treat yourself in USA</h3>
+                            </div>
+                            <div class="box_bottom">
+                                <img src="images/car1.png" alt="car_1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box">
+                            <div class="box_top">
+                                <h2>GET 15% OFF YOUR RENTAL</h2>
+                                <h3>Plan your trip now</h3>
+                            </div>
+                            <div class="box_bottom">
+                                <img src="images/car2.png" alt="car_2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- customer services -->
+    <div class="customer_services" id="SERVICES">
+        <div class="cantainer">
+            <div class="heading">
+                <h1>customer services</h1>
+            </div>
+            <div class="grid">
+                <div class="item">
+                    <div class="top">
+                        <i class="fa-solid fa-plus"></i>
+                        <h1>Special rates on car booking</h1>
+                    </div>
+                    <div class="bottom">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed nonumy eirmod tempor invidunt ut labore et dolore magnaed aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="top">
+                        <i class="fa-solid fa-plus"></i>
+                        <h1>Mobile Phone Reservation</h1>
+                    </div>
+                    <div class="bottom">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed nonumy eirmod tempor invidunt ut labore et dolore magnaed aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="top">
+                        <i class="fa-solid fa-plus"></i>
+                        <h1>Unlimited Miles Car Rental</h1>
+                    </div>
+                    <div class="bottom">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed nonumy eirmod tempor invidunt ut labore et dolore magnaed aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="top">
+                        <i class="fa-solid fa-plus"></i>
+                        <h1>One Way Car Rentals</h1>
+                    </div>
+                    <div class="bottom">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed nonumy eirmod tempor invidunt ut labore et dolore magnaed aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- news letter -->
+    <div class="news_letter">
+        <div class="cantainer">
+            <div class="text">
+                <h1>SIGN UP FOR AMAZING OFFERS</h1>
+                <h2 class="light_weight">EXCLUSIVE ACCESS FOR OFFERS AND PROMOTIONS</h2>
+            </div>
+            <div class="email">
+                <input type="text" id="emailAddress" placeholder="Enter your email address">
+                <a href="##" onclick="emailValidation()">send</a>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- vehicle models -->
+    <div class="vehicle_models" id="VEHICAL_MODELS">
+        <div class="cantainer">
+            <div class="heading">
+                <h1>Vehicle Models<span> - Our rental fleet at a glance</span></h1>
+            </div>
+            <div class="grid">
+                <div class="item">
+                    <div class="vehicles_dropdown">
+                        <select id="vehical_Selector">
+                            <option value="VW Golf VII">VW Golf VII</option>
+                            <option value="Audi A1 S-LINE">Audi A1 S-LINE</option>
+                            <option value="Toyota Camry">Toyota Camry</option>
+                            <option value="BMW 320 ModernLine">BMW 320 ModernLine</option>
+                            <option value="Mercedes-Benz GLK">Mercedes-Benz GLK</option>
+                            <option value="VW Passat CC">VW Passat CC</option>
+                        </select>
+                    </div>
+                    <ul id="vehical_model_wrapper">
+                        <li><a href="##" onclick="vehical_Model(this)" value="VW Golf VII">VW Golf VII<div></div></a></li>
+                        <li><a href="##" onclick="vehical_Model(this)" value="Audi A1 S-LINE">Audi A1 S-LINE<div></div></a></li>
+                        <li><a href="##" onclick="vehical_Model(this)" value="Toyota Camry">Toyota Camry<div></div></a></li>
+                        <li><a href="##" onclick="vehical_Model(this)" value="BMW 320 ModernLine">BMW 320 ModernLine<div></div></a></li>
+                        <li><a href="##" onclick="vehical_Model(this)" value="Mercedes-Benz GLK">Mercedes-Benz GLK<div></div></a></li>
+                        <li><a href="##" onclick="vehical_Model(this)" value="VW Passat CC">VW Passat CC<div></div></a></li>
+                        <li><a href="##" onclick="vehical_Model(this)" value="VW Golf VII">VW Golf VII<div></div></a></li>
+                        <li><a href="##" onclick="vehical_Model(this)" value="Audi A1 S-LINE">Audi A1 S-LINE<div></div></a></li>
+                        <li><a href="##" onclick="vehical_Model(this)" value="Toyota Camry">Toyota Camry<div></div></a></li>
+                        <li><a href="##" onclick="vehical_Model(this)" value="BMW 320 ModernLine">BMW 320 ModernLine<div></div></a></li>
+                        <li><a href="##" onclick="vehical_Model(this)" value="Mercedes-Benz GLK">Mercedes-Benz GLK<div></div></a></li>
+                        <li><a href="##" onclick="vehical_Model(this)" value="VW Passat CC">VW Passat CC<div></div></a></li>
+                        <li class="arrow">
+                            <a href="##" onclick="moveUp()"><i class="fa-solid fa-angle-up"></i></a>
+                            <a href="##" onclick="moveDown()"><i class="fa-solid fa-angle-down"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <img src="images/vehicle1.jpg" id="vehical_Image" alt="vehical">
+                </div>
+                <div class="item">
+                    <div class="price">
+                        <p><span id="vehical_Rent_Price">$ 37.40</span> rent per day</p>
+                    </div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Model</td>
+                                <td id="vehical_Model">Limousine</td>
+                            </tr>
+                            <tr>
+                                <td>Doors</td>
+                                <td id="vehical_Doors">4</td>
+                            </tr>
+                            <tr>
+                                <td>Seats</td>
+                                <td id="vehical_Seats">5</td>
+                            </tr>
+                            <tr>
+                                <td>Luggage</td>
+                                <td id="vehical_Luggage">2 Suitcases / 2 Bags</td>
+                            </tr>
+                            <tr>
+                                <td>Transmission</td>
+                                <td id="vehical_Transmission">Automatic</td>
+                            </tr>
+                            <tr>
+                                <td>Air conditioning</td>
+                                <td id="vehical_Air_Condition">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Minimum age</td>
+                                <td id="vehical_Age">25 years</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="reserve_btn">
+                        <a href="#CAR_RESERVE"><i class="fa-solid fa-calendar-days"></i> reserve now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testimonal -->
+    <div class="testimonal" id="REVIEWS">
+        <div class="cantainer">
+            <div class="heading">
+                <h1>testimonial</h1>
+            </div>
+            <div class="testimonal_grid owl-carousel owl-theme">
+                <div class="item">
+                    <div class="stars_wrapper">
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+                            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                            <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                            <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
+                            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                            <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                            <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                        </fieldset>
+                    </div>
+                    <p>
+                        It is always a positive experience when renting from your 5th street location. The staff is very professional and efficient and always smiling. And I always feel welcome and appreciated. The management is always prompt to solve any issue at any moment.
+                        Their efficiency and professionalism makes it my number one choice.
+                        <span>– Michael Smith, Santa Barbara CA</span>
+                    </p>
+                </div>
+                <div class="item">
+                    <div class="stars_wrapper">
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+                            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                            <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                            <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
+                            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                            <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                            <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                        </fieldset>
+                    </div>
+                    <p>
+                        This rental was the best rental experience ever! After completing all details on-line myself, the pick-up was super efficient, extremely friendly, and free of the usual 5 - 10 min very unpleasant drilling of why one is not signing up to all options (insurance,
+                        etc). I was handed the keys and a wide register print out that required...
+                        <span>– Jon Doe, Las Vegas NV</span>
+                    </p>
+                </div>
+                <div class="item">
+                    <div class="stars_wrapper">
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+                            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                            <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                            <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
+                            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                            <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                            <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                        </fieldset>
+                    </div>
+                    <p>
+                        This was my first time renting from car|rental. And over all it was a wonderful experience I have no complaints. The service rep help me find the best rental to suit my needs. I also love the fact that you guys provide luxury rentals at a great price.
+                        I will definitely rent with this company again.
+                        <span>– Michael Smith, Santa Barbara CA</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- embed map -->
+    <div class="embed_map" id="LOCATION">
+        <div class="mapouter">
+            <div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Santa%20Monica%20-%202102%20Lincoln%20Blvd&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <a href="https://putlocker-is.org"></a><br>
+                <style>
+                    .mapouter {
+                        position: relative;
+                        text-align: right;
+                        height: 500px;
+                        width: 100%;
+                    }
+                </style>
+                <a href="https://www.embedgooglemap.net"></a>
+                <style>
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none!important;
+                        height: 500px;
+                        width: 100%;
+                    }
+                </style>
+            </div>
+        </div>
+    </div>
+    <!-- quality guarantee -->
+    <div class="quality_guarantee">
+        <div class="cantainer">
+            <div class="heading">
+
+            </div>
+            <div class="grid">
+                <div class="item">
+                    <div class="item_text">
+                        <h1>Quality Guaranteed</h1>
+                        <p>Here is an example with one single photo displayed on the right.</p>
+                        <p class="light">Here is some dummy text. <a href="#" class="tooltip">Hover over me!<span class="tooltiptext">this is an demo Tooltip!</span></a> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, vero voluptas delectus explicabo maxime
+                            ad qui incidunt! Saepe.</p>
+                        <a href="#CONTACT" class="btn">more information</a>
+                    </div>
+                    <div class="item_image">
+                        <img src="images/info-img.jpg" alt="car">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_text">
+                        <h1>Watch our info tour</h1>
+                        <p>You can also show youtube videos in this section!</p>
+                        <p class="light">Here is some dummy text. Lorem ipsum dolor sit amet,<a href="#" class="tooltip">This is an labeled text snippet!<span class="tooltiptext">Tooltip text</span></a>, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                            aliquyam erat, sed diam voluptua.</p>
+                        <p class="light">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, vero voluptas delectus explicabo maxime ad qui incidunt! no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        </p>
+                    </div>
+                    <div class="item_image">
+                        <img src="images/info-img.jpg" alt="car">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our partners -->
+    <div class="partners">
+        <div class="cantainer">
+            <div class="heading">
+                <h1>Meet Our Partners</h1>
+            </div>
+            <div class="p_wrapper">
+                <p>
+                    To contribute to positive change and achieve our sustainability goals, we partner with many extraordinary organizations around the world. Their expertise enables us to do far more than we could alone, and their passion and talent inspire us. It is our
+                    pleasure to introduce you to a handful of the organizations whose accomplishments and commitments are representative of all the organizations we are fortunate to call our partners.
+                </p>
+            </div>
+            <div class="icon_wrapper">
+                <img src="images/partner1.png" alt="partner">
+                <img src="images/partner2.png" alt="partner">
+                <img src="images/partner3.png" alt="partner">
+                <img src="images/partner4.png" alt="partner">
+            </div>
+        </div>
+    </div>
+    <!-- contact us -->
+    <div class="contact_us" id="CONTACT">
+        <div class="cantainer">
+            <div class="heading">
+                <h1>Contact Us</h1>
+            </div>
+            <div class="grid">
+                <div class="main">
+                    <div class="p_wrapper">
+                        <p>You have any questions or need additional information?</p>
+                        <p class="strong"><span>Address:</span> Car|Rental / 3861 Sepulveda Blvd. / Culver City, CA 90230</p>
+                    </div>
+                    <div class="form">
+                        <div class="double">
+                            <div><input type="text" placeholder="First Name:" id="first_name"></div>
+                            <div><input type="text" placeholder="Last Name:" id="last_name"></div>
+                        </div>
+                        <div><input type="text" placeholder="Telephone:" id="telephone" onkeypress="numberFieldCheck(event)" maxlength="11"></div>
+                        <div><input type="email" placeholder="Email" id="email" required></div>
+                        <div><textarea cols="30" rows="10" placeholder="Messange" id="message"></textarea></div>
+                        <div><a href="##" onclick="contactFormSubmit()">submit message</a></div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="top">
+                        <div class="sidebar_heading">
+                            <h3>Customer Center</h3>
+                        </div>
+                        <div class="box">
+                            <div class="box_image">
+                                <img src="images/contact-box-img1.jpg" alt="image">
+                            </div>
+                            <div class="box_text">
+                                <h3>Sarah Connor</h3>
+                                <p><span>phone:</span> 666-999-888</p>
+                                <p><span>email:</span> connor@example.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="sidebar_heading">
+                            <h3>Change or Cancel Reservation</h3>
+                        </div>
+                        <div class="box">
+                            <div class="box_image">
+                                <img src="images/contact-box-img2.jpg" alt="image">
+                            </div>
+                            <div class="box_text">
+                                <h3>Mike Smith</h3>
+                                <p><span>phone:</span> 666-999-888</p>
+                                <p><span>email:</span> connor@example.com</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_image">
+                                <img src="images/contact-box-img3.jpg" alt="image">
+                            </div>
+                            <div class="box_text">
+                                <h3>Jane Doe</h3>
+                                <p><span>phone:</span> 666-999-888</p>
+                                <p><span>email:</span> connor@example.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="cantainer">
+            <div class="menu">
+                <ul>
+
+                    <li><a href="#HOME">home</a></li>
+                    <li><a href="#SERVICES">services</a></li>
+                    <li><a href="#VEHICAL_MODELS">vehical models</a></li>
+                    <li><a href="#REVIEWS">reviews</a></li>
+                    <li><a href="#LOCATION">location</a></li>
+                    <li><a href="#CONTACT">contact</a></li>
+                </ul>
+            </div>
+            <div class="copy_rights">
+                <p>©2022 Rizwan Sarwar, All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- script -->
+<script src="js/script.js"></script>
+
+</html>
